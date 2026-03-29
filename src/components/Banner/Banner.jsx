@@ -5,7 +5,7 @@ import bannerImg from '../../assets/products/banner.png';
 const Banner = () => {
   return (
     <div className="min-h-screen bg-[#f5f5f7]">
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-24">
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-10 lg:py-20">
         <div className="grid lg:grid-cols-2 items-center gap-3 lg:gap-5">
           
           {/* Left Content */}
@@ -19,19 +19,19 @@ const Banner = () => {
             </div>
 
             <div className="space-y-5">
-              <h1 className="text-5xl md:text-6xl lg:text-[65px] font-extrabold leading-[1.05] text-[#101727]">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[65px] text-center font-extrabold leading-[1.05] text-[#101727]">
                 Supercharge Your <br />
                 Digital Workflow
               </h1>
 
-              <p className="max-w-lg text-base md:text-lg leading-8 text-[#627382]">
+              <p className="max-w-lg text-base md:text-lg leading-8 text-[#627382] text-justify">
                 Access premium AI tools, design assets, templates, and
                 productivity software — all in one place. Start creating faster
                 today.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-4 text-sm md:text-base font-semibold">
+            <div className="flex flex-wrap flex-col lg:block gap-4 text-sm md:text-base font-semibold ">
               <button className="btn rounded-full border-0 bg-gradient-to-r from-violet-600 to-fuchsia-500 px-7 text-white shadow-lg hover:shadow-xl transition-all duration-300">
                 Explore Products
               </button>
