@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import ProductCard from '../ProductsCard/ProductsCard';
 import Cart from '../Cart/Cart';
 
-const PremiumDigitalToolsSection = () => {
+const PremiumDigitalToolsSection = ({ carts, setCarts }) => {
   const [products, setProducts] = useState([]);
   const [activeTab, setActiveTab] = useState('products');
-  const [carts, setCarts] = useState([]);
+  
 
   useEffect(() => {
     fetch('/products.json')
@@ -16,9 +19,13 @@ const PremiumDigitalToolsSection = () => {
   const handleAddToCart = (product) => {
     const exists = carts.find((item) => item.id === product.id);
 
-    if (!exists) {
-      setCarts([...carts, product]);
+    if (exists) {
+      toast.error('Product already added!');
+      return;
     }
+
+    setCarts([...carts, product]);
+    toast.success(`${product.name} added to cart`);
   };
 
   return (
@@ -30,7 +37,7 @@ const PremiumDigitalToolsSection = () => {
         </p>
       </div>
 
-      <div className="flex items-center justify-center gap-4 mt-8">
+      <div className="flex items-center justify-center gap-4 mt-8 mb-12">
         <button
           onClick={() => setActiveTab('products')}
           className={`rounded-full w-40 px-6 py-3 text-sm font-medium transition-all duration-300 ${
@@ -54,23 +61,28 @@ const PremiumDigitalToolsSection = () => {
         </button>
       </div>
 
-      <div className="mt-12">
-        {activeTab === 'products' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                handleAddToCart={handleAddToCart}
-              />
-            ))}
-          </div>
-        )}
+      {activeTab === 'products' && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              handleAddToCart={handleAddToCart}
+              carts={carts}
+            />
+          ))}
+        </div>
+      )}
 
-        {activeTab === 'cart' && (
-          <Cart carts={carts} setCarts={setCarts} />
-        )}
-      </div>
+      {activeTab === 'cart' && (
+        <Cart
+          carts={carts}
+          setCarts={setCarts}
+          toast={toast}
+        />
+      )}
+
+      <ToastContainer position="top-right" autoClose={2000} />
     </section>
   );
 };

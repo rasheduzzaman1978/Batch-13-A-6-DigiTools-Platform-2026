@@ -1,10 +1,12 @@
 import React from 'react';
 
-const ProductCard = ({ product, handleAddToCart }) => {
+const ProductCard = ({ product, handleAddToCart, carts }) => {
   const { name, description, price, period, tag, tagType, features, icon } = product;
 
+  const isAdded = carts.some((item) => item.id === product.id);
+
   const getBadgeStyle = () => {
-    if (tagType === 'popular') { 
+    if (tagType === 'popular') {
       return 'bg-violet-100 text-violet-600';
     }
 
@@ -32,9 +34,7 @@ const ProductCard = ({ product, handleAddToCart }) => {
           {icon}
         </div>
 
-        <span
-          className={`px-3 py-1 rounded-full text-xs font-medium ${getBadgeStyle()}`}
-        >
+        <span className={`px-3 py-1 rounded-full text-xs font-medium ${getBadgeStyle()}`}>
           {tag}
         </span>
       </div>
@@ -64,9 +64,14 @@ const ProductCard = ({ product, handleAddToCart }) => {
 
       <button
         onClick={() => handleAddToCart(product)}
-        className="w-full bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white py-3 rounded-full font-medium transition duration-300"
+        disabled={isAdded}
+        className={`w-full py-3 rounded-full font-medium transition duration-300 ${
+          isAdded
+            ? 'bg-green-500 text-white cursor-not-allowed'
+            : 'bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white'
+        }`}
       >
-        Buy Now
+        {isAdded ? 'Added To Cart' : 'Buy Now'}
       </button>
     </div>
   );
