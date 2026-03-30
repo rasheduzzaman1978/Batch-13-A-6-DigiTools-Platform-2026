@@ -52,4 +52,41 @@
     "period": "yearly",
     "tag": "Popular",
     "tagType": "popular",
+    "features": [
+      "50+ slide decks",
+      "Easy editing",
+      "High-resolution graphics"
+    ],
+    "icon": "📊"
+  },
+  {
+    "id": 5,
+    "name": "Website Wireframe Kit",
+    "description": "Responsive wireframe blocks for landing pages and dashboards.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "300+ components",
+      "Mobile responsive",
+      "Figma compatible"
+    ],
+    "icon": "🖥️"
+  },
+  {
+    "id": 6,
+    "name": "Marketing Copy Toolkit",
+    "description": "Ready-to-use marketing copy for ads, emails, and landing pages.",
+    "price": 29,
+    "period": "one-time",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": [
+      "Email templates",
+      "Ad copy examples",
+      "SEO headlines"
+    ],
+    "icon": "✍️"
+  }
 ]
