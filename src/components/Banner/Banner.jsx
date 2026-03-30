@@ -4,7 +4,7 @@ import bannerImg from '../../assets/products/banner.png';
 
 const Banner = () => {
   return (
-    <div className="min-h-screen bg-[#f5f5f7]">
+    <div className="bg-[#f5f5f7] py-8 lg:py-12">
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-8 lg:py-12">
         <div className="grid md:grid-cols-2 items-center gap-3 lg:gap-5">
           
