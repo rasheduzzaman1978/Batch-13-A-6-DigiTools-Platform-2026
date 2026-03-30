@@ -6,6 +6,7 @@ import PremiumDigitalToolsSection from './components/PremiumDigitalToolSection/P
 import Footer from './components/Footer/Footer';
 import StepsSection from './components/StepSection/StepsSection';
 import './App.css';
+import PricingCard from './components/PricingCard/PricingCard';
 
 function App() {
   const [carts, setCarts] = useState([]);
@@ -19,13 +20,14 @@ function App() {
       <Stat />
 
       <section>
-        <StepsSection />
+        
 
         <PremiumDigitalToolsSection
           carts={carts}
           setCarts={setCarts}
         />
-
+        <StepsSection />
+        <PricingCard></PricingCard>
         <Footer />
       </section>
     </>
