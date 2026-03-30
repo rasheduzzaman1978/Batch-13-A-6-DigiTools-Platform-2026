@@ -1,11 +1,12 @@
 
 
 
-import Navbar from './components/Navbar/Navbar'
-import './App.css'
-import Banner from './components/Banner/Banner'
-import Stat from './components/Stat/Stats'
-import PremiumDigitalToolsSection from './components/PremiumDigitalToolSection/PremiumDigitalToolSection'
+import Navbar from './components/Navbar/Navbar';
+import './App.css';
+import Banner from './components/Banner/Banner';
+import Stat from './components/Stat/Stats';
+import PremiumDigitalToolsSection from './components/PremiumDigitalToolSection/PremiumDigitalToolSection';
+import  Footer from './components/Footer/Footer';
 
 const getProducts = async () => {
   const res = await fetch("/products.json");
@@ -23,7 +24,10 @@ function App() {
     <Navbar></Navbar>
     <Banner></Banner>
     <Stat></Stat>
+    
     <PremiumDigitalToolsSection></PremiumDigitalToolsSection>
+    <Footer></Footer>
+
      
      
     </>
