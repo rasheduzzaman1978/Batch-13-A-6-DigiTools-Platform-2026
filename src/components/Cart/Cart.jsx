@@ -1,16 +1,24 @@
 import React from 'react';
+import cartImg from '../../assets/products/shopping-cart.png';
+import { BsCart2 } from "react-icons/bs";
 
 const Cart = ({ carts, setCarts, toast }) => {
   const handleRemove = (id) => {
-    const remainingCart = carts.filter((item) => item.id !== id);
-    setCarts(remainingCart);
-    toast.info('Product removed from cart');
-  };
+  const remainingCart = carts.filter((item) => item.id !== id);
+  setCarts(remainingCart);
 
-  const handleCheckout = () => {
-    setCarts([]);
-    toast.success('Proceeding to checkout');
-  };
+  toast.info('Product removed from cart', {
+    position: 'top-right',
+  });
+};
+
+const handleCheckout = () => {
+  setCarts([]);
+
+  toast.success('Proceed to checkout successful', {
+    position: 'top-right',
+  });
+};
 
   const totalPrice = carts.reduce((total, item) => total + item.price, 0);
 
@@ -21,11 +29,13 @@ const Cart = ({ carts, setCarts, toast }) => {
       </h2>
 
       {carts.length === 0 ? (
-        <div className="text-center py-16">
-          <h3 className="text-2xl font-semibold text-gray-400">
-            Cart is Empty
-          </h3>
-        </div>
+        <div className="text-center py-16 flex flex-col items-center justify-center">
+  <BsCart2 size={80} className="text-gray-300 mb-4" />
+
+  <h3 className="text-2xl font-semibold text-gray-400">
+    Your Cart is Empty
+  </h3>
+</div>
       ) : (
         <>
           <div className="space-y-4">
