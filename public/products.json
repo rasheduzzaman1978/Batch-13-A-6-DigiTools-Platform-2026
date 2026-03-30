@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "name": "CV Builder Pro",
+    "description": "Professional resume builder with ATS-friendly templates.",
+    "price": 19,
+    "period": "one-time",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF"
+    ],
+    "icon": "📄"
+  },
+  {
+    "id": 2,
+    "name": "Social Media Kit",
+    "description": "Ready-made templates for Instagram, Facebook, and LinkedIn.",
+    "price": 9,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "500+ templates",
+      "Editable Canva links",
+      "Weekly updates"
+    ],
+    "icon": "📱"
+  },
+  {
+    "id": 3,
+    "name": "UI Design Bundle",
+    "description": "Premium Figma UI kits for web and mobile apps.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": [
+      "20+ UI kits",
+      "Dark & light mode",
+      "Fully customizable"
+    ],
+    "icon": "🎨"
+  },
+  {
+    "id": 4,
+    "name": "Business Presentation Pack",
+    "description": "Modern PowerPoint and Google Slides templates.",
+    "price": 15,
+    "period": "yearly",
+    "tag": "Popular",
+    "tagType": "popular",
+]
