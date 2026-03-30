@@ -7,6 +7,13 @@ import Banner from './components/Banner/Banner'
 import Stat from './components/Stat/Stats'
 import PremiumDigitalToolsSection from './components/PremiumDigitalToolSection/PremiumDigitalToolSection'
 
+const getProducts = async () => {
+  const res = await fetch("/products.json");
+  return res.json();
+};
+
+const productsPromise = getProducts();
+console.log(productsPromise);
 
 function App() {
   
