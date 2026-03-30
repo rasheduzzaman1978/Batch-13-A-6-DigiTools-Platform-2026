@@ -1,0 +1,78 @@
+import React from 'react';
+import { FiUser } from "react-icons/fi";
+import { LuRocket } from "react-icons/lu";
+import { LuPackage } from "react-icons/lu";
+
+const StepsSection = () => {
+  return (
+    <section className="bg-[#f5f5f7] py-24 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1d2433] mb-4">
+          Get Started In 3 Steps
+        </h2>
+
+        <p className="text-gray-500 text-base mb-16">
+          Start using premium digital tools in minutes, not hours.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="relative bg-white rounded-3xl border border-gray-200 p-10 shadow-sm hover:shadow-md transition duration-300">
+            <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-violet-600 text-white text-xs font-semibold flex items-center justify-center">
+              01
+            </div>
+
+            <div className="w-20 h-20 rounded-full bg-violet-100 text-violet-600 flex items-center justify-center mx-auto mb-8">
+              <FiUser size={36} />
+            </div>
+
+            <h3 className="text-xl md:text-2xl font-bold text-[#1d2433] mb-4">
+              Create Account
+            </h3>
+
+            <p className="text-gray-500 text-sm leading-7">
+              Sign up for free in seconds. No credit card required to get started.
+            </p>
+          </div>
+
+          <div className="relative bg-white rounded-3xl border border-gray-200 p-10 shadow-sm hover:shadow-md transition duration-300">
+            <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-violet-600 text-white text-xs font-semibold flex items-center justify-center">
+              02
+            </div>
+
+            <div className="w-20 h-20 rounded-full bg-violet-100 text-violet-600 flex items-center justify-center mx-auto mb-8">
+              <LuPackage size={36} />
+            </div>
+
+            <h3 className="text-2xl font-bold text-[#1d2433] mb-4">
+              Choose Products
+            </h3>
+
+            <p className="text-gray-500 text-sm leading-7">
+              Browse our catalog and select the tools that fit your needs.
+            </p>
+          </div>
+
+          <div className="relative bg-white rounded-3xl border border-gray-200 p-10 shadow-sm hover:shadow-md transition duration-300">
+            <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-violet-600 text-white text-xs font-semibold flex items-center justify-center">
+              03
+            </div>
+
+            <div className="w-20 h-20 rounded-full bg-violet-100 text-violet-600 flex items-center justify-center mx-auto mb-8">
+              <LuRocket size={34} />
+            </div>
+
+            <h3 className="text-2xl font-bold text-[#1d2433] mb-4">
+              Start Creating
+            </h3>
+
+            <p className="text-gray-500 text-sm leading-7">
+              Download and start using your premium tools immediately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default StepsSection;

@@ -18,7 +18,7 @@ const Banner = () => {
 </div>
 
             <div className="space-y-5">
-              <h1 className="text-2xl sm:text-3xl md:text-[40px] lg:text-[50px] text-center md:text-left font-extrabold leading-[1.05] text-[#101727]">
+              <h1 className="text-2xl sm:text-3xl md:text-[40px] lg:text-[60px] text-center md:text-left font-extrabold leading-[1.05] text-[#101727]">
                 Supercharge Your <br />
                 Digital Workflow
               </h1>
@@ -45,12 +45,12 @@ const Banner = () => {
           </div>
 
           {/* Right Image */}
-          <div className="flex justify-center">
-            <div className="relative rounded-4xl bg-white/60 p-2 shadow-xl backdrop-blur-sm">
+          <div className="flex justify-center md:justify-end">
+            <div className="relative rounded-2xl bg-white/60 shadow-xl backdrop-blur-sm">
               <img
                 src={bannerImg}
                 alt="Digital Workflow"
-                className="w-[280px] md:w-[300px] lg:w-[380px] h-auto rounded-[28px]"
+                className="w-[300px] md:w-[350px] lg:w-[480px] h-auto rounded-2xl"
               />
               <div className="absolute inset-0 rounded-4xl bg-gradient-to-tr from-white/40 via-transparent to-white/10 pointer-events-none"></div>
             </div>

@@ -1,5 +1,8 @@
 import React from 'react';
-import { FaYoutube, FaFacebookF, FaXTwitter } from 'react-icons/fa6';
+// import { FaFacebookSquare } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+import { PiInstagramLogoFill } from "react-icons/pi";
+import {FaFacebookSquare } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -48,15 +51,15 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Social Links</h3>
             <div className="flex gap-3">
               <button className="w-10 h-10 rounded-full bg-white text-[#07122b] flex items-center justify-center hover:scale-105 transition">
-                <FaYoutube size={16} />
+                <PiInstagramLogoFill size={16} />
               </button>
 
               <button className="w-10 h-10 rounded-full bg-white text-[#07122b] flex items-center justify-center hover:scale-105 transition">
-                <FaFacebookF size={14} />
+              <FaFacebookSquare  size={14}/>
               </button>
 
               <button className="w-10 h-10 rounded-full bg-white text-[#07122b] flex items-center justify-center hover:scale-105 transition">
-                <FaXTwitter size={14} />
+                <BsTwitterX  size={14} />
               </button>
             </div>
           </div>
