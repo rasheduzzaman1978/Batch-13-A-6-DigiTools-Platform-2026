@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-
 const PricingCard = () => {
   const [plans, setPlans] = useState([]);
 
@@ -49,7 +48,9 @@ const PricingCard = () => {
           {plans.map((plan) => (
             <div
               key={plan.id}
-              className={`relative rounded-3xl p-8 shadow-sm ${getCardStyle(plan.tagType)}`}
+              className={`relative rounded-3xl p-8 shadow-sm ${getCardStyle(
+                plan.tagType
+              )}`}
             >
               {plan.tagType === 'best-seller' && (
                 <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ffd67c] text-[#1d2433] text-base font-semibold px-4 py-1 rounded-full">
@@ -58,7 +59,14 @@ const PricingCard = () => {
               )}
 
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-4xl">{plan.icon}</span>
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center p-2">
+                  <img
+                    src={plan.icon}
+                    alt={plan.name}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+
                 <h3 className="text-2xl font-bold">{plan.name}</h3>
               </div>
 
@@ -73,9 +81,12 @@ const PricingCard = () => {
               </p>
 
               <div className="mb-8">
-                <span className="text-3xl md:text-5xl font-bold">${plan.price}</span>
+                <span className="text-3xl md:text-5xl font-bold">
+                  ${plan.price}
+                </span>
+
                 <span
-                  className={`text-lg ${
+                  className={`text-lg ml-1 ${
                     plan.tagType === 'best-seller'
                       ? 'text-violet-100'
                       : 'text-gray-400'
@@ -93,7 +104,10 @@ const PricingCard = () => {
                 }`}
               >
                 {plan.features.map((feature, index) => (
-                  <li key={index}>✓ {feature}</li>
+                  <li key={index} className="flex items-center gap-2">
+                    <span>✓</span>
+                    <span>{feature}</span>
+                  </li>
                 ))}
               </ul>
 
