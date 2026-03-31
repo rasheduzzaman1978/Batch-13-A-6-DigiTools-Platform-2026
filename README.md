@@ -1,16 +1,31 @@
-# React + Vite
+# DigiTools - Digital Tools Buying Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Overview
 
-Currently, two official plugins are available:
+DigiTool is a modern digital marketplace website where users can browse premium digital products, add them to cart, remove products, and proceed to checkout. the website is fully responsive and disigned with a clean UI inspired by modern SaaS platforms.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Technologies Used
 
-## React Compiler
+* React.js
+* Tailwind CSS
+* DaisyUI
+* JavaScript (ES6+)
+* React Toastify
+* React icons
+* JSON
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Features
 
-## Expanding the ESLint configuration
+1. Dynamic Product Section with data loaded from JSON.
+2. Add to Cart, Remove from Cart, and Proceed to Checkout functionality.
+3. Fully Responsive UI with beautiful cards, pricing section, footer and navbar.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Additional Features
+
+* Cart count updates instantly in the navbar.
+* Toast notifications for add, remove and checkout actions.
+* Product button changes from "Buy Now" to "Added to Cart" after adding.
+
+# Live Project Purpose
+
+This project was built to practice React component structure, props, state management, conditional rendering, responsive dedign and API/jSON data handling.

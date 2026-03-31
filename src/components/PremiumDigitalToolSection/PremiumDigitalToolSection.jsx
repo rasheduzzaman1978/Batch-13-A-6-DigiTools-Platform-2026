@@ -82,7 +82,13 @@ const PremiumDigitalToolsSection = ({ carts, setCarts }) => {
         />
       )}
 
-      <ToastContainer position="top-right" autoClose={2000} />
+      <ToastContainer
+        position="top-right"
+        autoClose={1500}
+        theme="colored"
+        className="px-2"
+        toastClassName="rounded-xl"
+      />
     </section>
   );
 };
