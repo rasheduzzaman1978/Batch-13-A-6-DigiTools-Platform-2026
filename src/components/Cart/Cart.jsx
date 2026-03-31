@@ -68,8 +68,8 @@ const handleCheckout = () => {
           </div>
 
           <div className="mt-8 flex justify-between items-center">
-            <p className="text-sm text-gray-400">Total:</p>
-            <h3 className="text-3xl font-bold text-[#1d2433]">
+            <p className="text-base text-[#101727]">Total:</p>
+            <h3 className="text-2xl font-bold text-[#1d2433]">
               ${totalPrice}
             </h3>
           </div>
