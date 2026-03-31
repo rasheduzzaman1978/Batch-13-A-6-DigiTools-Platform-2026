@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import StepsSection from './components/StepSection/StepsSection';
 import './App.css';
 import PricingCard from './components/PricingCard/PricingCard';
+import ReadyProduct from './components/ReadyProduct/ReadyProduct';
 
 function App() {
   const [carts, setCarts] = useState([]);
@@ -28,6 +29,7 @@ function App() {
         />
         <StepsSection />
         <PricingCard></PricingCard>
+        <ReadyProduct></ReadyProduct>
         <Footer />
       </section>
     </>

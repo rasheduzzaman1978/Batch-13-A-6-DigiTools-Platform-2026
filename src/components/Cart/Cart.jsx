@@ -23,7 +23,7 @@ const handleCheckout = () => {
   const totalPrice = carts.reduce((total, item) => total + item.price, 0);
 
   return (
-    <div className="bg-white border border-gray-200 rounded-3xl p-6 md:p-8 shadow-sm">
+    <div className="bg-white border border-gray-200 rounded-3xl font-bold p-6 md:p-8 shadow-sm">
       <h2 className="text-3xl font-bold text-[#1d2433] mb-8">
         Your Cart
       </h2>
@@ -32,7 +32,7 @@ const handleCheckout = () => {
         <div className="text-center py-16 flex flex-col items-center justify-center">
   <BsCart2 size={80} className="text-gray-300 mb-4" />
 
-  <h3 className="text-2xl font-semibold text-gray-400">
+  <h3 className="text-2xl font-semibold text-[#627382]">
     Your Cart is Empty
   </h3>
 </div>
@@ -42,24 +42,24 @@ const handleCheckout = () => {
             {carts.map((item) => (
               <div
                 key={item.id}
-                className="bg-[#f8f8fc] rounded-2xl px-5 py-4 flex items-center justify-between"
+                className="bg-[#F9FAFC] rounded-2xl px-2 md:px-5 py-8 flex items-center justify-between"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-2xl">
+                  <div className=" w-12 h-12 md:w-15 md:h-15 rounded-full bg-white flex items-center justify-center text-2xl">
                     {item.icon}
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-[#1d2433]">
+                    <h3 className="text-base md:text-xl font-semibold text-[#101727]">
                       {item.name}
                     </h3>
-                    <p className="text-sm text-gray-500">${item.price}</p>
+                    <p className="text-base font-semibold text-[#627382]">${item.price}</p>
                   </div>
                 </div>
 
                 <button
                   onClick={() => handleRemove(item.id)}
-                  className="text-pink-500 text-sm font-medium hover:text-pink-600"
+                  className="text-pink-500 text-base font-medium hover:text-pink-600"
                 >
                   Remove
                 </button>
@@ -76,7 +76,7 @@ const handleCheckout = () => {
 
           <button
             onClick={handleCheckout}
-            className="w-full mt-8 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white py-4 rounded-full font-medium hover:opacity-90 transition"
+            className="w-full mt-8 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white py-4 rounded-full font-medium hover:opacity-90 transition"
           >
             Proceed To Checkout
           </button>

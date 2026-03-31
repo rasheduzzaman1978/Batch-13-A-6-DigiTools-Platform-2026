@@ -41,7 +41,7 @@ const ProductCard = ({ product, handleAddToCart, carts }) => {
 
       <h2 className="text-2xl font-bold text-[#1d2433] mb-3">{name}</h2>
 
-      <p className="text-gray-500 text-sm leading-6 mb-6 min-h-[70px]">
+      <p className="text-[#627382] text-base leading-6 mb-6 min-h-17.5">
         {description}
       </p>
 
@@ -50,11 +50,11 @@ const ProductCard = ({ product, handleAddToCart, carts }) => {
         <span className="text-gray-400 text-sm ml-1">{getPeriodText()}</span>
       </div>
 
-      <ul className="space-y-3 mb-8">
+      <ul className="space-y-3 mb-4 md:mb-8">
         {features.map((feature, index) => (
           <li
             key={index}
-            className="flex items-center gap-2 text-sm text-gray-500"
+            className="flex items-center gap-2 text-sm text-[#627382]"
           >
             <span className="text-green-500 font-bold">✓</span>
             {feature}
@@ -68,7 +68,7 @@ const ProductCard = ({ product, handleAddToCart, carts }) => {
         className={`w-full py-3 rounded-full font-medium transition duration-300 ${
           isAdded
             ? 'bg-green-500 text-white cursor-not-allowed'
-            : 'bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white'
+            : 'bg-gradient-to-r from-[#4F39F6] to-[#9514FA] hover:from-violet-700 hover:to-purple-700 text-white'
         }`}
       >
         {isAdded ? 'Added To Cart' : 'Buy Now'}

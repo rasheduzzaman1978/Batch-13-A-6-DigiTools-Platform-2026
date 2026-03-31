@@ -31,8 +31,8 @@ const PremiumDigitalToolsSection = ({ carts, setCarts }) => {
   return (
     <section className="max-w-7xl mx-auto px-6 py-20">
       <div className="text-center mb-12">
-        <h2 className="text-5xl font-bold mb-4">Premium Digital Tools</h2>
-        <p className="text-gray-500">
+        <h2 className="text-2xl md:text-3xl lg:text-5xl font-extrabold text-[#1d2433] mb-4">Premium Digital Tools</h2>
+        <p className="text-[#627382]">
           Browse our collection of digital products.
         </p>
       </div>
@@ -40,9 +40,9 @@ const PremiumDigitalToolsSection = ({ carts, setCarts }) => {
       <div className="flex items-center justify-center gap-4 mt-8 mb-12">
         <button
           onClick={() => setActiveTab('products')}
-          className={`rounded-full w-40 px-6 py-3 text-sm font-medium transition-all duration-300 ${
+          className={`rounded-full w-40 px-6 py-3 text-base font-bold transition-all duration-300 ${
             activeTab === 'products'
-              ? 'bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white shadow-md'
+              ? 'bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white shadow-md'
               : 'bg-gray-100 text-[#25065D] hover:text-violet-600'
           }`}
         >
@@ -51,9 +51,9 @@ const PremiumDigitalToolsSection = ({ carts, setCarts }) => {
 
         <button
           onClick={() => setActiveTab('cart')}
-          className={`rounded-full w-40 px-6 py-3 text-sm font-medium transition-all duration-300 ${
+          className={`rounded-full w-40 px-6 py-3 text-base font-medium transition-all duration-300 ${
             activeTab === 'cart'
-              ? 'bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white shadow-md'
+              ? 'bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white shadow-md'
               : 'bg-gray-100 text-[#25065D] hover:text-violet-600'
           }`}
         >

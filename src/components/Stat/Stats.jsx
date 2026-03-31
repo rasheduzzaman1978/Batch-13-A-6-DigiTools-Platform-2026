@@ -8,7 +8,7 @@ const Stats = () => {
   ];
 
   return (
-    <div className="w-full bg-gradient-to-r from-[#672cf8] via-purple-600 to-[#8b19fa] py-6">
+    <div className="w-full bg-gradient-to-r from-[#4F39F6] to-[#9514FA] py-6">
       <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 text-center text-white">
         {stats.map((stat, index) => (
           <div

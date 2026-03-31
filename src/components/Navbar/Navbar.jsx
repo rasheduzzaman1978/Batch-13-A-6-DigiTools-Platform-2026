@@ -6,7 +6,7 @@ const Navbar = ({ carts }) => {
     <div className="w-full border-b border-base-200 bg-white sticky top-0 z-50">
       <div className="navbar mx-auto max-w-7xl px-6 lg:px-10 h-20">
         <div className="navbar-start">
-          <a className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-violet-600 to-fuchsia-500 bg-clip-text text-transparent">
+          <a className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
             DigiTools
           </a>
         </div>
@@ -39,7 +39,7 @@ const Navbar = ({ carts }) => {
               className="w-7 h-7"
             />
 
-            <span className="absolute -top-2 -right-3 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center">
+            <span className="absolute -top-2 -right-3 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center">
               {carts.length}
             </span>
           </div>
@@ -48,7 +48,7 @@ const Navbar = ({ carts }) => {
             Login
           </button>
 
-          <button className="btn btn-primary btn-sm rounded-full px-5 normal-case bg-gradient-to-r from-violet-600 to-fuchsia-500 border-none text-sm md:text-base font-semibold text-white shadow-md hover:shadow-lg transition-all">
+          <button className="btn btn-primary btn-sm rounded-full px-5 normal-case bg-gradient-to-r from-[#4F39F6] to-[#9514FA] border-none text-sm md:text-base font-semibold text-white shadow-md hover:shadow-lg transition-all">
             Get Started
           </button>
         </div>

@@ -5,7 +5,7 @@ import { LuPackage } from "react-icons/lu";
 
 const StepsSection = () => {
   return (
-    <section className="bg-[#f5f5f7] py-24 px-6">
+    <section className="bg-[#F9FAFC] py-6 md:py-20 lg:py-24 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1d2433] mb-4">
           Get Started In 3 Steps
@@ -17,7 +17,7 @@ const StepsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="relative bg-white rounded-3xl border border-gray-200 p-10 shadow-sm hover:shadow-md transition duration-300">
-            <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-violet-600 text-white text-xs font-semibold flex items-center justify-center">
+            <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white text-xs font-semibold flex items-center justify-center">
               01
             </div>
 
@@ -29,13 +29,13 @@ const StepsSection = () => {
               Create Account
             </h3>
 
-            <p className="text-gray-500 text-sm leading-7">
+            <p className="text-gray-500 leading-7">
               Sign up for free in seconds. No credit card required to get started.
             </p>
           </div>
 
           <div className="relative bg-white rounded-3xl border border-gray-200 p-10 shadow-sm hover:shadow-md transition duration-300">
-            <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-violet-600 text-white text-xs font-semibold flex items-center justify-center">
+            <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white text-xs font-semibold flex items-center justify-center">
               02
             </div>
 
@@ -53,7 +53,7 @@ const StepsSection = () => {
           </div>
 
           <div className="relative bg-white rounded-3xl border border-gray-200 p-10 shadow-sm hover:shadow-md transition duration-300">
-            <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-violet-600 text-white text-xs font-semibold flex items-center justify-center">
+            <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white text-xs font-semibold flex items-center justify-center">
               03
             </div>
 
