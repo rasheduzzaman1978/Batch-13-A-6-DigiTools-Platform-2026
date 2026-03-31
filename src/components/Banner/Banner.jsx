@@ -18,7 +18,7 @@ const Banner = () => {
 </div>
 
             <div className="space-y-5">
-              <h1 className="text-2xl sm:text-3xl md:text-[40px] lg:text-[50px] xl:text-[60px]text-center md:text-left font-extrabold leading-[1.05] text-[#101727]">
+              <h1 className="text-3xl sm:text-4xl md:text-[40px] lg:text-[50px] xl:text-[60px] text-center md:text-left font-extrabold leading-[1.05] text-[#101727]">
                 Supercharge Your <br />
                 Digital Workflow
               </h1>

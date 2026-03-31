@@ -33,10 +33,10 @@ const PricingCard = () => {
   };
 
   return (
-    <section className="bg-white py-6 md:py-20 lg:py-24 px-5 md:px-6">
+    <section className="bg-white py-6 md:py-12 lg:py-16 px-5 md:px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#1d2433] mb-4">
+          <h2 className="text-3xl md:text-[40px] lg:text-5xl font-extrabold text-[#1d2433] mb-4">
             Simple, Transparent Pricing
           </h2>
 

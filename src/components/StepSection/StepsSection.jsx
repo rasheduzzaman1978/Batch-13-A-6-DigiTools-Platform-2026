@@ -5,9 +5,9 @@ import { LuPackage } from "react-icons/lu";
 
 const StepsSection = () => {
   return (
-    <section className="bg-[#F9FAFC] py-6 md:py-20 lg:py-24 px-6">
+    <section className="bg-[#F9FAFC] py-6 md:py-12 lg:py-16 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1d2433] mb-4">
+        <h2 className="text-3xl md:text-[40px] lg:text-5xl font-extrabold text-[#1d2433] mb-4">
           Get Started In 3 Steps
         </h2>
 

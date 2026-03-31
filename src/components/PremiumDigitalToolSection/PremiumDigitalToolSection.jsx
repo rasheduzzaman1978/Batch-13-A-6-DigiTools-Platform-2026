@@ -29,9 +29,9 @@ const PremiumDigitalToolsSection = ({ carts, setCarts }) => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-20">
+    <section className="max-w-7xl mx-auto py-6 md:py-12 lg:py-16 px-5 md:px-6">
       <div className="text-center mb-12">
-        <h2 className="text-2xl md:text-3xl lg:text-5xl font-extrabold text-[#1d2433] mb-4">Premium Digital Tools</h2>
+        <h2 className="text-3xl md:text-[40px] lg:text-5xl font-extrabold text-[#1d2433] mb-4">Premium Digital Tools</h2>
         <p className="text-[#627382]">
           Browse our collection of digital products.
         </p>
