@@ -6,37 +6,51 @@ import ProductCard from '../ProductsCard/ProductsCard';
 import Cart from '../Cart/Cart';
 
 const PremiumDigitalToolsSection = ({ carts, setCarts }) => {
+  // Products data store করার জন্য state
   const [products, setProducts] = useState([]);
-  const [activeTab, setActiveTab] = useState('products');
-  
 
+  // কোন tab active থাকবে সেটা track করার জন্য state
+  const [activeTab, setActiveTab] = useState('products');
+
+  // products.json থেকে data fetch করা
   useEffect(() => {
     fetch('/products.json')
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
 
+  // Cart-এ product add করার function
   const handleAddToCart = (product) => {
+    // Product আগে থেকেই cart-এ আছে কিনা check করা
     const exists = carts.find((item) => item.id === product.id);
 
+    // Product আগে থেকেই থাকলে error toast দেখাবে
     if (exists) {
       toast.error('Product already added!');
       return;
     }
 
+    // Product cart-এ add করা
     setCarts([...carts, product]);
+
+    // Success message show করা
     toast.success(`${product.name} added to cart`);
   };
 
   return (
     <section className="max-w-7xl mx-auto py-6 md:py-12 lg:py-16 px-5 md:px-6">
+      {/* Section heading */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-[40px] lg:text-5xl font-extrabold text-[#1d2433] mb-4">Premium Digital Tools</h2>
+        <h2 className="text-3xl md:text-[40px] lg:text-5xl font-extrabold text-[#1d2433] mb-4">
+          Premium Digital Tools
+        </h2>
+
         <p className="text-[#627382]">
           Browse our collection of digital products.
         </p>
       </div>
 
+      {/* Products এবং Cart button */}
       <div className="flex items-center justify-center gap-4 mt-8 mb-12">
         <button
           onClick={() => setActiveTab('products')}
@@ -61,6 +75,7 @@ const PremiumDigitalToolsSection = ({ carts, setCarts }) => {
         </button>
       </div>
 
+      {/* যদি Products tab active থাকে তাহলে সব product card দেখাবে */}
       {activeTab === 'products' && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product) => (
@@ -74,6 +89,7 @@ const PremiumDigitalToolsSection = ({ carts, setCarts }) => {
         </div>
       )}
 
+      {/* যদি Cart tab active থাকে তাহলে cart section দেখাবে */}
       {activeTab === 'cart' && (
         <Cart
           carts={carts}
@@ -82,6 +98,7 @@ const PremiumDigitalToolsSection = ({ carts, setCarts }) => {
         />
       )}
 
+      {/* Toast message show করার container */}
       <ToastContainer
         position="top-right"
         autoClose={1500}

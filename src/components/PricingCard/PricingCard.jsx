@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from 'react';
 
 const PricingCard = () => {
+  // Pricing plan data store করার জন্য state
   const [plans, setPlans] = useState([]);
 
+  // products.json থেকে প্রথম ৩টি data fetch করা
   useEffect(() => {
     fetch('/products.json')
       .then((res) => res.json())
       .then((data) => setPlans(data.slice(0, 3)));
   }, []);
 
+  // কোন period হলে কোন text দেখাবে
   const getPeriodText = (period) => {
     if (period === 'monthly') return '/Month';
     if (period === 'yearly') return '/Year';
     return '/One-Time';
   };
 
+  // Card background style tagType অনুযায়ী change হবে
   const getCardStyle = (tagType) => {
     if (tagType === 'best-seller') {
       return 'bg-[#101727] text-white border-none';
@@ -23,6 +27,7 @@ const PricingCard = () => {
     return 'bg-[#F2F2F2] border border-gray-200 text-[#1d2433]';
   };
 
+  // Button style tagType অনুযায়ী change হবে
   const getButtonStyle = (tagType) => {
     if (tagType === 'best-seller') {
       return 'bg-white text-violet-600 hover:bg-gray-100';
@@ -34,6 +39,7 @@ const PricingCard = () => {
   return (
     <section className="bg-white py-6 md:py-12 lg:py-16 px-5 md:px-6">
       <div className="max-w-6xl mx-auto">
+        {/* Section heading */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-[40px] lg:text-5xl font-extrabold text-[#1d2433] mb-4">
             Simple, Transparent Pricing
@@ -44,6 +50,7 @@ const PricingCard = () => {
           </p>
         </div>
 
+        {/* Pricing cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {plans.map((plan) => (
             <div
@@ -52,12 +59,14 @@ const PricingCard = () => {
                 plan.tagType
               )}`}
             >
+              {/* Best seller হলে badge show করবে */}
               {plan.tagType === 'best-seller' && (
                 <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ffd67c] text-[#1d2433] text-base font-semibold px-4 py-1 rounded-full">
                   Most Popular
                 </span>
               )}
 
+              {/* Card top section */}
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center p-2">
                   <img
@@ -70,6 +79,7 @@ const PricingCard = () => {
                 <h3 className="text-2xl font-bold">{plan.name}</h3>
               </div>
 
+              {/* Description */}
               <p
                 className={`text-sm mb-6 ${
                   plan.tagType === 'best-seller'
@@ -80,6 +90,7 @@ const PricingCard = () => {
                 {plan.description}
               </p>
 
+              {/* Price section */}
               <div className="mb-8">
                 <span className="text-3xl md:text-5xl font-bold">
                   ${plan.price}
@@ -96,6 +107,7 @@ const PricingCard = () => {
                 </span>
               </div>
 
+              {/* Features list */}
               <ul
                 className={`space-y-4 mb-10 ${
                   plan.tagType === 'best-seller'
@@ -111,6 +123,7 @@ const PricingCard = () => {
                 ))}
               </ul>
 
+              {/* Card button */}
               <button
                 className={`w-full py-4 rounded-full font-medium transition ${getButtonStyle(
                   plan.tagType

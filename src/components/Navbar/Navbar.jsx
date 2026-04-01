@@ -3,35 +3,46 @@ import cartImg from '../../assets/products/shopping-cart.png';
 
 const Navbar = ({ carts }) => {
   return (
+    // পুরো navbar section
     <div className="w-full border-b border-base-200 bg-white sticky top-0 z-50">
       <div className="navbar mx-auto max-w-7xl px-6 lg:px-10 h-20">
+        
+        {/* Left side logo */}
         <div className="navbar-start">
           <a className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
             DigiTools
           </a>
         </div>
 
+        {/* Center menu items */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-3 text-sm md:text-base font-medium text-[#101727]">
             <li>
               <a className="hover:text-primary transition-colors">Products</a>
             </li>
+
             <li>
               <a className="hover:text-primary transition-colors">Features</a>
             </li>
+
             <li>
               <a className="hover:text-primary transition-colors">Pricing</a>
             </li>
+
             <li>
               <a className="hover:text-primary transition-colors">Testimonials</a>
             </li>
+
             <li>
               <a className="hover:text-primary transition-colors">FAQ</a>
             </li>
           </ul>
         </div>
 
+        {/* Right side buttons */}
         <div className="navbar-end gap-4">
+          
+          {/* Cart icon with cart count */}
           <div className="relative flex items-center">
             <img
               src={cartImg}
@@ -39,15 +50,18 @@ const Navbar = ({ carts }) => {
               className="w-7 h-7"
             />
 
+            {/* Cart count badge */}
             <span className="absolute -top-2 -right-3 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center">
               {carts.length}
             </span>
           </div>
 
+          {/* Login button */}
           <button className="btn btn-ghost btn-sm normal-case text-sm md:text-base font-medium text-[#101727] hidden sm:flex">
             Login
           </button>
 
+          {/* Get Started button */}
           <button className="btn btn-primary btn-sm rounded-full px-5 normal-case bg-gradient-to-r from-[#4F39F6] to-[#9514FA] border-none text-sm md:text-base font-semibold text-white shadow-md hover:shadow-lg transition-all">
             Get Started
           </button>

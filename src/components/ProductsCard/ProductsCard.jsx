@@ -1,6 +1,7 @@
 import React from 'react';
 
 const ProductCard = ({ product, handleAddToCart, carts }) => {
+  // Product object থেকে data destructure করা
   const {
     name,
     description,
@@ -12,8 +13,10 @@ const ProductCard = ({ product, handleAddToCart, carts }) => {
     icon,
   } = product;
 
+  // Product cart-এ already added আছে কিনা check করা
   const isAdded = carts.some((item) => item.id === product.id);
 
+  // Tag অনুযায়ী badge color change হবে
   const getBadgeStyle = () => {
     if (tagType === 'popular') {
       return 'bg-violet-100 text-violet-600';
@@ -30,15 +33,18 @@ const ProductCard = ({ product, handleAddToCart, carts }) => {
     return 'bg-gray-100 text-gray-600';
   };
 
+  // Period অনুযায়ী text show করবে
   const getPeriodText = () => {
-    if (period === 'monthly') return '/Mo';
+    if (period === 'monthly') return '/Month';
     if (period === 'yearly') return '/Year';
     return '/One-Time';
   };
 
   return (
     <div className="bg-white border border-gray-200 rounded-3xl p-5 shadow-sm hover:shadow-md transition duration-300">
+      {/* Card top section */}
       <div className="flex items-start justify-between mb-6">
+        {/* Product icon */}
         <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center overflow-hidden p-2">
           <img
             src={icon}
@@ -47,6 +53,7 @@ const ProductCard = ({ product, handleAddToCart, carts }) => {
           />
         </div>
 
+        {/* Product tag */}
         <span
           className={`px-3 py-1 rounded-full text-xs font-medium ${getBadgeStyle()}`}
         >
@@ -54,17 +61,21 @@ const ProductCard = ({ product, handleAddToCart, carts }) => {
         </span>
       </div>
 
+      {/* Product name */}
       <h2 className="text-2xl font-bold text-[#1d2433] mb-3">{name}</h2>
 
+      {/* Product description */}
       <p className="text-[#627382] text-base leading-6 mb-6 min-h-[70px]">
         {description}
       </p>
 
+      {/* Product price */}
       <div className="mb-5">
         <span className="text-3xl font-bold text-[#1d2433]">${price}</span>
         <span className="text-gray-400 text-sm ml-1">{getPeriodText()}</span>
       </div>
 
+      {/* Product features */}
       <ul className="space-y-3 mb-4 md:mb-8">
         {features.map((feature, index) => (
           <li
@@ -77,6 +88,7 @@ const ProductCard = ({ product, handleAddToCart, carts }) => {
         ))}
       </ul>
 
+      {/* Add to cart button */}
       <button
         onClick={() => handleAddToCart(product)}
         disabled={isAdded}
