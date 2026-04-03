@@ -6,10 +6,12 @@ const PricingCard = () => {
 
   // products.json থেকে প্রথম ৩টি data fetch করা
   useEffect(() => {
-    fetch('/products.json')
-      .then((res) => res.json())
-      .then((data) => setPlans(data.slice(0, 3)));
-  }, []);
+  fetch('/products.json')
+    .then((res) => res.json())
+    // .then((data) => setPlans(data.slice(0, 3))) // প্রথম ৩টি plan set করা
+    .then((data) => setPlans(data)) // সব plan set করা
+    .catch((error) => console.error('Error fetching plans:', error));
+}, []);
 
   // কোন period হলে কোন text দেখাবে
   const getPeriodText = (period) => {
